@@ -11,11 +11,12 @@ type Message = {
 function Admin() {
   const [messages, setMessages] = useState<Message[]>([]);
 
-  useEffect(() => {
-    axios.get("https://portfolio-project-jvta.onrender.com/api/messages")
-      .then(res => setMessages(res.data))
-      .catch(err => console.log(err));
-  }, []);
+ useEffect(() => {
+  axios
+    .get("https://portfolio-project-jvta.onrender.com/api/messages")
+    .then(res => setMessages(res.data))
+    .catch(err => console.log(err));
+}, []);
 
   const handleDelete = async (id: number) => {
   try {
