@@ -20,7 +20,9 @@ function Admin() {
 
   const handleDelete = async (id: number) => {
   try {
-    await axios.delete(`http://localhost:5000/api/messages/${id}`);
+    await axios.delete(
+  `https://portfolio-project-jvta.onrender.com/api/messages/${id}`
+);
 
     // remove from UI instantly
     setMessages(messages.filter((msg) => msg.id !== id));
