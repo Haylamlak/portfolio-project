@@ -6,7 +6,7 @@ const contactRoutes = require("./routes/contactRoutes");
 
 const app = express();
 
-// ✅ FIX CORS (IMPORTANT)
+// FIX CORS 
 app.use(cors({
   origin: "https://this-is-my-last-portfolio-2026.netlify.app",
   methods: ["GET", "POST", "DELETE"],
@@ -15,15 +15,15 @@ app.use(cors({
 
 app.use(express.json());
 
-// ✅ Use routes
+// Use routes
 app.use("/api", contactRoutes);
 
-// ✅ Test route
+// Test route
 app.get("/", (req, res) => {
   res.send("Portfolio API Running");
 });
 
-// ✅ Start server
+// Start server
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server running...");
 });
