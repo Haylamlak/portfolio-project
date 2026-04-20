@@ -20,7 +20,7 @@ function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    await axios.post("http://localhost:5000/api/contact", form);
+    await axios.post("https://portfolio-project-jvta.onrender.com/api/contact", form);
 
     alert("Message sent successfully");
 

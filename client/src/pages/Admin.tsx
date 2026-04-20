@@ -12,7 +12,7 @@ function Admin() {
   const [messages, setMessages] = useState<Message[]>([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/messages")
+    axios.get("https://portfolio-project-jvta.onrender.com/api/messages")
       .then(res => setMessages(res.data))
       .catch(err => console.log(err));
   }, []);
